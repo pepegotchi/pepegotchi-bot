@@ -682,16 +682,16 @@ async def estado(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     await update.message.reply_text(msg, parse_mode="Markdown")
 
-## === Inicializar bot ===
-from dotenv import load_dotenv
-import os
+if __name__ == "__main__":
+    from dotenv import load_dotenv
+    import os
 
-load_dotenv()
+    load_dotenv()
+    TOKEN = os.getenv("TOKEN")
 
-async def main():
+    app = ApplicationBuilder().token(TOKEN).build()
 
-    app = ApplicationBuilder().token(os.getenv("TOKEN")).build()
-
+    # ------------------ HANDLERS ------------------
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("ayuda", ayuda))
     app.add_handler(CommandHandler("tienda", tienda))
@@ -703,41 +703,18 @@ async def main():
     app.add_handler(CommandHandler("dormir", dormir))
     app.add_handler(CommandHandler("estado", estado))
 
-    # === NUEVA TIENDA ===
+    # Callback tienda
     app.add_handler(CallbackQueryHandler(comprar_callback))
 
-    # Reinicio diario del Pepegotchi
-    asyncio.create_task(reinicio_diario())
+    # --------------- REINICIO DIARIO ---------------
+    from datetime import time
+    job_queue = app.job_queue
 
-    print("🤖 Bot iniciado correctamente. Esperando comandos…")
-    await app.run_polling()
-# --- ===Inicio: Ejecución segura del bot ---
-import nest_asyncio
-import asyncio
+    job_queue.run_daily(
+        reinicio_diario,
+        time=time(hour=0, minute=0, second=0),
+        name="reinicio_diario"
+    )
 
-nest_asyncio.apply()
-
-async def main_async():
-    try:
-        await main()
-    except Exception as e:
-        print(f"⚠️ Error en ejecución principal: {e}")
-
-if __name__ == "__main__":
-    import asyncio
-
-    async def run_bot():
-        # Ejecuta tu función principal sin cerrar el loop
-        await main()
-
-    try:
-        # En la mayoría de entornos funciona bien
-        asyncio.run(run_bot())
-    except RuntimeError as e:
-        # Si ya hay un loop corriendo (como en Termux)
-        if "running event loop" in str(e):
-            loop = asyncio.get_event_loop()
-            loop.create_task(run_bot())
-            loop.run_forever()
-        else:
-            raise
+    print("🤖 Bot iniciado correctamente. Esperando comandos...")
+    app.run_polling()
