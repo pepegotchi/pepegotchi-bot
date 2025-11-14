@@ -1,0 +1,102 @@
+{
+    "usuarios": {
+        "6964948132": {
+            "nombre": "\u27b7 \u035c\u0e4b\u0361\u08e7\u08e7\u08e7\u08e7\u08e7\u08e7\u08e7\u08e7\u08e7\u08e7\u08e7\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u08e9\u20e4ErwinJP",
+            "xp": 220,
+            "referidos": [],
+            "codigo": "48132",
+            "ultimo_sueno": "2025-11-13T02:24:07.769896-06:00",
+            "monedas": 250,
+            "inventario": {},
+            "is_sleeping": false,
+            "sleep_until": null,
+            "ultimo_checkin": "2025-11-13",
+            "ultimo_rango": "\ud83d\udc38 Beb\u00e9",
+            "energia": 100,
+            "daily": {
+                "date": null,
+                "alimentar": 0,
+                "jugar": 0
+            },
+            "veces_alimento": {
+                "2025-11-13": 1
+            },
+            "durmiendo": true,
+            "hora_dormir": "2025-11-13T15:01:36.302994-06:00"
+        },
+        "7301402640": {
+            "nombre": "\ud83c\udf3d My Duck \ud83c\udf3d",
+            "xp": 805,
+            "referidos": [],
+            "codigo": "02640",
+            "ultimo_sueno": "2025-11-13T01:40:52.655615-06:00",
+            "monedas": 400,
+            "inventario": {},
+            "ultimo_checkin": "2025-11-13",
+            "ultimo_rango": "\ud83d\udc38 Beb\u00e9",
+            "energia": 100,
+            "is_sleeping": false,
+            "sleep_until": null,
+            "daily": {
+                "date": null,
+                "alimentar": 0,
+                "jugar": 0
+            },
+            "veces_alimento": {
+                "2025-11-13": 1
+            },
+            "durmiendo": true,
+            "hora_dormir": "2025-11-13T15:00:31.124257-06:00"
+        },
+        "5908627415": {
+            "nombre": "TOMOEJO \ud83c\udf3d My duck \ud83c\udf3d",
+            "xp": 75,
+            "referidos": [],
+            "codigo": "27415",
+            "monedas": 25,
+            "inventario": {
+                "mosca": 1,
+                "mosquito": 1,
+                "ara\u00f1a": 1
+            },
+            "ultimo_sueno": null,
+            "is_sleeping": false,
+            "sleep_until": null,
+            "ultimo_checkin": "2025-11-13",
+            "ultimo_rango": "\ud83d\udc38 Beb\u00e9",
+            "energia": 100,
+            "daily": {
+                "date": null,
+                "alimentar": 0,
+                "jugar": 0
+            },
+            "veces_alimento": {
+                "2025-11-13": 1
+            },
+            "durmiendo": true,
+            "hora_dormir": "2025-11-13T15:30:49.711225-06:00"
+        },
+        "7105927657": {
+            "nombre": "Ezequiel \u26a1\ufe0f Orexn",
+            "xp": 20300,
+            "referidos": [],
+            "codigo": "27657",
+            "monedas": 19145,
+            "inventario": {},
+            "ultimo_sueno": "2025-11-13T11:48:55.812850-06:00",
+            "ultimo_checkin": "2025-11-13",
+            "ultimo_rango": "\ud83d\udd25 Legendario Supremo",
+            "energia": 100,
+            "is_sleeping": false,
+            "sleep_until": null,
+            "daily": {
+                "date": null,
+                "alimentar": 0,
+                "jugar": 0
+            },
+            "veces_alimento": {
+                "2025-11-13": 3
+            }
+        }
+    }
+}
